@@ -1,14 +1,14 @@
-﻿Console.Write("Informe o valor total da compra: ");
-double valorTotal = double.Parse(Console.ReadLine());
+﻿Console.Write("Informe a quantidade de tarefas concluídas: ");
+int tarefas = int.Parse(Console.ReadLine());
 
-double desconto = 0;
-if (valorTotal >= 200)
+if (tarefas >= 50)
 {
-    desconto = valorTotal * 0.10;
+    Console.WriteLine("Meta atingida.");
+    Console.WriteLine($"Tarefas concluídas: {tarefas}");
 }
-
-double valorFinal = valorTotal - desconto;
-
-Console.WriteLine($"Valor original: R$ {valorTotal:F2}");
-Console.WriteLine($"Desconto aplicado: R$ {desconto:F2}");
-Console.WriteLine($"Valor final: R$ {valorFinal:F2}");
+else
+{
+    int faltaram = 50 - tarefas;
+    Console.WriteLine("Meta não atingida.");
+    Console.WriteLine($"Faltaram {faltaram} tarefas.");
+}
