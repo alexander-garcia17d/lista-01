@@ -1,22 +1,28 @@
 ﻿using System;
 
-Console.Write("Informe o primeiro valor: ");
-decimal valor1 = decimal.Parse(Console.ReadLine()!);
+int positivos = 0;
+int negativos = 0;
+int zeros = 0;
 
-Console.Write("Informe o segundo valor: ");
-decimal valor2 = decimal.Parse(Console.ReadLine()!);
+for (int i = 0; i < 10; i++)
+{
+    Console.Write("Informe um número: ");
+    int numero = int.Parse(Console.ReadLine()!);
 
-Console.Write("Informe o terceiro valor: ");
-decimal valor3 = decimal.Parse(Console.ReadLine()!);
+    if (numero > 0)
+    {
+        positivos++;
+    }
+    else if (numero < 0)
+    {
+        negativos++;
+    }
+    else
+    {
+        zeros++;
+    }
+}
 
-Console.Write("Informe o quarto valor: ");
-decimal valor4 = decimal.Parse(Console.ReadLine()!);
-
-Console.Write("Informe o quinto valor: ");
-decimal valor5 = decimal.Parse(Console.ReadLine()!);
-
-decimal soma = valor1 + valor2 + valor3 + valor4 + valor5;
-decimal media = soma / 5m;
-
-Console.WriteLine($"Soma dos valores: {soma}");
-Console.WriteLine($"Média dos valores: {media}");
+Console.WriteLine($"Quantidade de positivos: {positivos}");
+Console.WriteLine($"Quantidade de negativos: {negativos}");
+Console.WriteLine($"Quantidade de zeros: {zeros}");
