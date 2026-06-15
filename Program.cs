@@ -1,30 +1,14 @@
 ﻿using System;
 
-Console.Write("Informe a primeira pontuação: ");
-int primeira = int.Parse(Console.ReadLine());
+Console.Write("Informe um número inteiro: ");
+int numero = int.Parse(Console.ReadLine());
 
-Console.Write("Informe a segunda pontuação: ");
-int segunda = int.Parse(Console.ReadLine());
-
-Console.Write("Informe a terceira pontuação: ");
-int terceira = int.Parse(Console.ReadLine());
-
-if (primeira == segunda && segunda == terceira)
+if (numero % 2 == 0)
 {
-    Console.WriteLine("As três pontuações são iguais.");
+    Console.WriteLine("O número informado é par.");
 }
 else
 {
-    int maior = primeira;
-    if (segunda > maior)
-    {
-        maior = segunda;
-    }
-    if (terceira > maior)
-    {
-        maior = terceira;
-    }
-
-    Console.WriteLine($"Maior pontuação: {maior}");
+    Console.WriteLine("O número informado é ímpar.");
 }
 
